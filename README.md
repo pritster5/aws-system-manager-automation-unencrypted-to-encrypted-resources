@@ -5,10 +5,10 @@ This sample describes how to automatically remediate unencrypted EBS Volumes. Am
 ![EBS architecture diagram](./ebs-architecture.png)
 
 ## Prerequisites 
-A workstation with both AWS CLI and jq installed. Instructions on installation can be found in the Tools section.
-IAM permissions provisioned to have read and write access to CloudFormation, EC2, Systems Manager, Config, & KMS.
-AWS Organizations configured with all features enabled, a requirement for Service Control Policies.
-Config enabled in the target accounts ensuring there are no Config rules in your AWS accounts with the name "encrypted-volumes". This solution deploys a rule with this name. Existing Config rules with this name may result in failure on deployment.  This can also result in unnecessary charges related to processing the same rule more than once.
+1. A workstation with both AWS CLI and jq installed. Instructions on installation can be found in the Tools section.
+2. IAM permissions provisioned to have read and write access to CloudFormation, EC2, Systems Manager, Config, & KMS.
+3. AWS Organizations configured with all features enabled, a requirement for Service Control Policies.
+4. Config enabled in the target accounts ensuring there are no Config rules in your AWS accounts with the name "encrypted-volumes". *Note*: This solution deploys a rule with this name. Existing Config rules with this name may result in failure on deployment.  This can also result in unnecessary charges related to processing the same rule more than once.
 
 
 ## Limitations
